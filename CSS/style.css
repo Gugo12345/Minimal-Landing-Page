@@ -126,6 +126,11 @@
     height: 32px;
 }
 
+.send-button {
+    width: 24px;
+    height: 24px;
+}
+
 @media (max-width: 768px) {
     .testimonial-card {
         text-align: center;
