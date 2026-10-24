@@ -1,0 +1,134 @@
+:root {
+    --bs-success: #4CAF4F;
+    --bs-success-rgb: 76, 175, 79;
+    --bs-success-border-subtle: #C8E6C9;
+    --bs-success-bg-subtle: #E8F5E9;
+    --bs-body-font-family: 'Inter', sans-serif;
+    --bs-body-color: #212121;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.hero-illustration {
+    animation: fadeInUp 1s ease-out, floatAnimation 4s ease-in-out infinite 1s;
+    max-width: 100%;
+    height: auto;
+}
+
+.card-scale {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.card-scale:hover {
+    transform: scale(1.02);
+}
+
+.blog-card-overlay {
+    bottom: -20px;
+    width: 85%;
+}
+
+.text-decoration-underliner {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.text-decoration-underliner:hover {
+    color: #4CAF4F;
+}
+
+.text-decoration-underliner::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #4CAF4F;
+    visibility: hidden;
+    transform: scaleX(0); 
+    transition: all 0.3s ease-in-out; 
+}
+
+.nav-link:hover .text-decoration-underliner::after,
+.nav-link.active .text-decoration-underliner::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.text-decoration-hover {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.text-decoration-hover:hover {
+    color: #5ed662;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--bs-success-bg-subtle);
+    color: var(--bs-success);
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234CAF4F'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708 z'/%3e%3c/svg%3e");
+}
+
+.community-icon-box {
+    width: 65px;
+    height: 55px;
+}
+
+.testimonial-img-box {
+    width: 150px;
+    height: 150px;
+}
+
+.blog-header-box {
+    max-width: 600px;
+}
+
+.blog-img {
+    height: 286px;
+    object-fit: cover;
+}
+
+.spacer-50 {
+    height: 50px;
+}
+
+.cta-heading {
+    max-width: 800px;
+}
+
+.social-icon-btn {
+    width: 32px;
+    height: 32px;
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        text-align: center;
+        padding: 20px;
+    }
+}
