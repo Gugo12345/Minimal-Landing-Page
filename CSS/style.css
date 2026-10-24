@@ -126,9 +126,9 @@
     height: 32px;
 }
 
-.send-button {
-    width: 24px;
-    height: 24px;
+.three-container-style{
+    width: 100%;
+    height: 380px;
 }
 
 @media (max-width: 768px) {
